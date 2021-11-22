@@ -54,7 +54,7 @@ class LoginFragment : Fragment() {
         binding.LOGIN.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_loginFragment_to_welcomeonboardingFragment)
         }
-        
+
 
 
 

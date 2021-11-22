@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/loginFragment">
 
@@ -15,5 +16,13 @@
     <fragment
         android:id="@+id/welcomeonboardingFragment"
         android:name="com.udacity.shoestore.WelcomeonboardingFragment"
-        android:label="WelcomeonboardingFragment" />
+        android:label="WelcomeonboardingFragment" >
+        <action
+            android:id="@+id/action_welcomeonboardingFragment_to_instructionsonsFragment"
+            app:destination="@id/instructionsonsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsonsFragment"
+        android:name="com.udacity.shoestore.InstructionsonboardingFragment"
+        android:label="InstructionsFragment" />
 </navigation>
