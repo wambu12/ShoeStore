@@ -29,13 +29,29 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
+<!--
 
     <fragment
         android:id="@+id/titleFragment"
         android:name="com.udacity.shoestore.LoginFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+-->
+    <!-- The NavHostFragment within the activity_main layout -->
+    <fragment
+        android:id="@+id/myNavHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:navGraph="@navigation/navigation"
+        app:defaultNavHost="true"
+        />
+
+
+
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

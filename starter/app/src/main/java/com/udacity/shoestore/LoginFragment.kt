@@ -41,7 +41,19 @@ class LoginFragment : Fragment() {
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_login, container, false)
         return binding.root
+
+
     }
+
+
+
+
+
+
+
+
+
+
 
     companion object {
         /**
