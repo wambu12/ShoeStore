@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -40,6 +41,25 @@ class LoginFragment : Fragment() {
 
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_login, container, false)
+
+
+
+        //The complete onClickListener with Navigation
+        binding.REGISTER.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_loginFragment_to_welcomeonboardingFragment)
+        }
+
+
+        //The complete onClickListener with Navigation
+        binding.LOGIN.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_loginFragment_to_welcomeonboardingFragment)
+        }
+        
+
+
+
+
+
         return binding.root
 
 
