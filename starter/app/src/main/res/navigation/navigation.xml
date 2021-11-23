@@ -24,5 +24,21 @@
     <fragment
         android:id="@+id/instructionsonsFragment"
         android:name="com.udacity.shoestore.InstructionsonboardingFragment"
-        android:label="InstructionsFragment" />
+        android:label="InstructionsFragment" >
+        <action
+            android:id="@+id/action_instructionsonsFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListingFragment"
+        android:name="com.udacity.shoestore.ShoeListingFragment"
+        android:label="ShoeListingFragment" >
+        <action
+            android:id="@+id/action_shoeListingFragment_to_shoeDetailFragment"
+            app:destination="@id/shoeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailFragment"
+        android:name="com.udacity.shoestore.ShoeDetailFragment"
+        android:label="ShoeDetailFragment" />
 </navigation>

@@ -42,12 +42,17 @@
 
 
     </ScrollView>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="650dp"
         android:clickable="true"
-        android:src="@drawable/ic_add" />
+        android:src="@drawable/ic_add"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </LinearLayout>
 
