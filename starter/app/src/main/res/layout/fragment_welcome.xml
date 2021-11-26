@@ -10,42 +10,69 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center_horizontal"
+
 
        tools:context=".WelcomeonboardingFragment"
+
 
       >
 
 
-
         <TextView
-            android:gravity="center"
+            android:id="@+id/username"
+            style="@style/first"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
             android:layout_marginTop="200dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
 
-            android:text="Textview1"
-            android:id="@+id/username"/>
+            android:gravity="center"
+            android:text="@string/WELCOMETextview"
+            android:textAlignment="center" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <TextView
+            android:id="@+id/password"
+            style="@style/first"
+
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:layout_marginTop="40dp"
+
             android:gravity="center"
 
+            android:textAlignment="center"
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
 
-            android:text="Textview2"
-
-            android:id="@+id/password"
-
-            />
+            android:visibility="visible"
+            android:text="@string/CUSTOMERTEXTVIEW" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="NEXT"
+            android:id="@+id/NEXT"
+            style="@style/first"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:layout_marginTop="40dp"
             android:background="#3f76ff"
+            android:text="@string/NEXTButton"
             android:textColor="#fff"
-            android:id="@+id/NEXT"/>
+            tools:text="@string/NEXTButton" />
 
     </LinearLayout>
 

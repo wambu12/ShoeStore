@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+<resources>
+
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="smallpadding">1dp</dimen>
+
+    <dimen name="smallmargin">8dp</dimen>
+
+
+</resources>

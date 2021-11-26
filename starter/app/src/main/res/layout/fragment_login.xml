@@ -18,13 +18,13 @@
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="360dp"
+        android:layout_width="0dp"
         android:layout_height="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="98dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/emailHint"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,14 +34,14 @@
         app:layout_constraintVertical_bias="0.36" />
 
     <EditText
-        android:hint="Password"
         android:id="@+id/editTextTextPassword"
-        android:layout_width="377dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
+        android:hint="@string/passwordButtonHint"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,23 +49,28 @@
 
     <Button
         android:id="@+id/LOGIN"
+        style="@style/first"
         android:layout_width="155dp"
         android:layout_height="50dp"
         android:layout_marginStart="49dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="27dp"
-        android:text="Login "
+        android:fontFamily="@font/roboto"
+        android:paddingTop="@dimen/smallpadding"
+        android:text="@string/LoginButton"
         app:layout_constraintEnd_toStartOf="@+id/REGISTER"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <Button
         android:id="@+id/REGISTER"
+
+        style="@style/first"
         android:layout_width="146dp"
         android:layout_height="49dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="REGISTER"
+        android:text="@string/REGISTERButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/LOGIN"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />

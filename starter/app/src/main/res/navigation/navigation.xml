@@ -28,6 +28,7 @@
         <action
             android:id="@+id/action_instructionsonsFragment_to_shoeListingFragment"
             app:destination="@id/shoeListingFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/shoeListingFragment"
@@ -35,10 +36,30 @@
         android:label="ShoeListingFragment" >
         <action
             android:id="@+id/action_shoeListingFragment_to_shoeDetailFragment"
-            app:destination="@id/shoeDetailFragment" />
+            app:destination="@id/shoeDetailFragment"
+            app:popUpTo="@id/instructionsonsFragment"
+            app:popUpToInclusive="true" />
+
+
+        <argument
+            android:name="SHOENAME"
+            app:argType="string" />
+        <argument
+            android:name="Company"
+            app:argType="string" />
+        <argument
+            android:name="ShoeSize"
+            app:argType="string" />
+        <argument
+            android:name="Description"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailFragment"
         android:name="com.udacity.shoestore.ShoeDetailFragment"
-        android:label="ShoeDetailFragment" />
+        android:label="ShoeDetailFragment" >
+        <action
+            android:id="@+id/action_shoeDetailFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment" />
+    </fragment>
 </navigation>

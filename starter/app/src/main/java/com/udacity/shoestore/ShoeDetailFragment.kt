@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
+import kotlinx.android.synthetic.main.fragment_shoe_detail.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -41,6 +43,34 @@ class ShoeDetailFragment : Fragment() {
 
         val binding: FragmentShoeDetailBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe_detail, container, false)
+
+
+
+
+
+
+        binding.save.setOnClickListener { view: View ->
+            var shoename= binding.editShoeName.text.toString()
+            var company=binding.editTextCompany.text.toString()
+            var shoesize=binding.editTextShoeSize.text.toString()
+           var description=binding.editTextTextPersonName8.text.toString()
+
+
+           //view.findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListingFragment)
+            // Adding the parameters to the Action
+            view.findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment(shoename,company,shoesize,description))
+
+
+
+            // Using directions to navigate to the GameWonFragment
+           // view.findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment(shoename,company,shoesize,description))
+        }
+
+        binding.button4.setOnClickListener { view: View ->
+
+            view.findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListingFragment)
+        }
+
         return binding.root
     }
 

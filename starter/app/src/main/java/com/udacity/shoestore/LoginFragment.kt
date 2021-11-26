@@ -1,12 +1,11 @@
 package com.udacity.shoestore
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -43,7 +42,9 @@ class LoginFragment : Fragment() {
             inflater, R.layout.fragment_login, container, false)
 
 
+        val UserEmail= binding.editTextTextEmailAddress
 
+        val UserPassword= binding.editTextTextPassword
         //The complete onClickListener with Navigation
         binding.REGISTER.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_loginFragment_to_welcomeonboardingFragment)
@@ -52,7 +53,10 @@ class LoginFragment : Fragment() {
 
         //The complete onClickListener with Navigation
         binding.LOGIN.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_loginFragment_to_welcomeonboardingFragment)
+          //  view.findNavController().navigate(R.id.action_loginFragment_to_welcomeonboardingFragment)
+
+            // Adding the parameters to the Action
+            view.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeonboardingFragment())
         }
 
 
@@ -64,6 +68,11 @@ class LoginFragment : Fragment() {
 
 
     }
+
+
+
+
+
 
 
 

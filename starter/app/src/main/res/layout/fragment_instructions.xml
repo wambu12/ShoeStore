@@ -11,42 +11,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center_horizontal"
 
 
 
         >
 
 
-
         <TextView
-            android:gravity="center"
+            android:id="@+id/username"
+            style="@style/first"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
             android:layout_marginTop="200dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
 
-            android:text="Textview1"
-            android:id="@+id/username"/>
+            android:gravity="center"
+            android:text="@string/WELCOMETextview"
+            android:textAlignment="center" />
 
         <TextView
+            android:id="@+id/password"
             android:gravity="center"
 
+            style="@style/first"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
 
-            android:text="Textview2"
+            android:textAlignment="center"
 
-            android:id="@+id/password"
 
-            />
+            android:text="@string/CUSTOMERTEXTVIEW" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login"
+            android:id="@+id/NEXT"
+            style="@style/first"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:layout_marginTop="40dp"
             android:background="#3f76ff"
+            android:text="@string/NEXTButton"
             android:textColor="#fff"
-            android:id="@+id/login"/>
+            tools:text="@string/NEXTButton" />
 
     </LinearLayout>
 
